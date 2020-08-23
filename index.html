@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display a random number.</p>
+
+<button onclick="peints()">Try it</button>
+
+<p id="demo"></p>
+
+<script>function peints(){
+function myFunction() {
+   var result           = '';
+   var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   var charactersLength = characters.length;
+   result+=  characters.charAt(Math.floor(Math.random() * charactersLength));
+   
+   for ( var i = 0; i < 3; i++ ) {
+      
+   result += Math.floor(Math.random()*10);
+   
+   }
+   result+=  characters.charAt(Math.floor(Math.random() * charactersLength));
+   
+   return result;
+}
+document.getElementById("demo").innerHTML = myFunction();
+}
+</script>
+
+</body>
+</html>
